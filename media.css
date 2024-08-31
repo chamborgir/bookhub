@@ -1,0 +1,142 @@
+/* Base styles (default for mobile-first approach) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding: 10px;
+}
+
+/* Styles for tablets and larger devices (min-width: 768px) */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .tagline {
+        font-size: 40px;
+    }
+
+    #text2 {
+        font-size: 90px;
+    }
+
+    #text {
+        font-size: 20px;
+    }
+
+    .pager button {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+
+
+/* Styles for desktops and larger devices (min-width: 992px) */
+@media (min-width: 992px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .tagline {
+        font-size: 60px;
+    }
+
+    #text2 {
+        font-size: 175px;
+    }
+
+    #text {
+        font-size: 35px;
+    }
+
+    .pager button {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+/* Styles for large desktops (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .navbar {
+        padding: 25px;
+    }
+
+    .tagline {
+        font-size: 70px;
+    }
+
+    #text2 {
+        font-size: 225px;
+    }
+
+    #text {
+        font-size: 40px;
+    }
+
+    .pager button {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+/* Styles for portrait mode on small devices (max-width: 767px) */
+@media (max-width: 767px) and (orientation: portrait) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .tagline {
+        font-size: 40px;
+    }
+
+    #text2 {
+        font-size: 90px;
+    }
+
+    #text {
+        font-size: 20px;
+    }
+
+    .pager button {
+        width: 120px;
+        height: 40px;
+    }
+
+    #searchResults {
+        grid-template-columns: 1fr; /* Adjust layout to a single column if needed */
+      }
+    
+      .book {
+        width: 100%; /* Make each book take full width in a single column layout */
+        box-sizing: border-box; /* Include padding and border in the element's width */
+      }
+}
+
+/* Styles for landscape mode on small devices (max-width: 767px) */
+@media (max-width: 767px) and (orientation: landscape) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .tagline {
+        font-size: 45px;
+    }
+
+    #text2 {
+        font-size: 100px;
+    }
+
+    #text {
+        font-size: 20px;
+    }
+
+    .pager button {
+        width: 130px;
+        height: 45px;
+    }
+}
+

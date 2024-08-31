@@ -1,0 +1,323 @@
+body {
+    background-image: url(./asset/bg.png);
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.navbar {
+    padding: 20px 30px; /* Increase padding for the entire navbar */
+    
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px; /* Increase padding for the nav links */
+    font-size: 20px;
+}
+
+.form-control {
+    padding: 10px; /* Increase padding for the search input */
+}
+
+.btn-outline-success {
+    padding: 10px 20px; /* Increase padding for the search button */
+}
+
+
+
+
+/*  */
+.navbar {
+    background-color: #F0F0F0    !important; /* Replace with your desired color */
+}
+
+.navbar-brand {
+    cursor: default;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: black; /* Text color for links and brand */
+}
+
+.navbar .nav-link:hover {
+    color: #3498db; /* Optional: Hover color for links */
+}
+
+
+/*         book                     */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color:#F0F0F0;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1;
+}
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+.footer p {
+    margin: 0;
+}
+
+
+
+#searchResults {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Default to 2 columns */
+    gap: 15px;
+    justify-content: center;
+}
+
+.book {
+    display: flex;
+    align-items: flex-start;
+}
+.book img {
+    margin-right: 15px;
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+.book-info {
+    display: flex;
+    flex-direction: column;
+}
+.book-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.book-author, .book-year {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+.pager {
+    margin-top: 20px;
+    text-align: center;
+    display: none; /* Hide pager by default */
+    margin-bottom: 20px;
+    padding: 30px;
+}
+.pager button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.pager button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+
+.tagline {
+    text-align: center;
+    padding-top: 5vh;
+    font-family: "Nerko One", cursive;
+    font-style: normal;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+#text {
+    font-family: "Comic Neue", cursive;
+    font-weight: 150;
+    font-style: normal;
+    color: hsl(0, 5%, 62%);
+    margin-top: -50px;
+   
+}
+
+#text2 {
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 10px;
+
+}
+
+#highlight {
+    color:  #3498db;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.searchResults {
+    padding-left: 2 0px;
+}
+
+
+
+
+/* 
+#text {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#text::after {
+    content: '';
+    padding: 100%;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#text {
+    animation: slide 5s linear;
+}  */
+
+
+
+
+#loadingSpinner {
+    display: none; /* Hide by default */
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fixed position to keep it in the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full viewport width */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: background color for better visibility */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.bouncing-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 60px; /* Adjust based on your design needs */
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color:#3498db; /* Color of the dots */
+    border-radius: 50%;
+    animation: bounce 1.5s infinite;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+
+
+#searchResults {
+    opacity: 1;
+    transition: opacity 0.5s;
+    padding-left: 5vh;
+}
+#searchInput {
+    width: 100%; /* Full width to fit container */
+    max-width: 300px; /* Maximum width to maintain design */
+    padding: 10px; /* Padding inside input */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: width 0.3s ease; /* Smooth transition for resizing */
+}
+
+/* Style for search input placeholder */
+#searchInput::placeholder {
+    font-size: 14px; /* Smaller font size for placeholder */
+    color: #666; /* Optional: Adjust color if needed */
+}
+
+/* Style for search button */
+.btn-outline-success {
+    border-color: #3498db; /* Border color */
+    color: #3498db; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+}
+
+.btn-outline-success:hover {
+    background-color: #3498db; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+/* no book found */
+#noBook {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 30px;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+
+
+
+/* pager */
+
+
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    padding: 20px; /* Consistent padding on all sides */
+    box-sizing: border-box; /* Include padding in the element's width and height */
+    text-align: center; /* Center text content */
+}
